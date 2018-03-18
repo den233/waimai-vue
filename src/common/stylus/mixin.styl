@@ -1,0 +1,49 @@
+// 下边框1px
+bottom-border-1px($color)
+  position relative
+  &::before
+    content ''
+    position absolute
+    z-index 200px
+    left 0
+    bottom 0
+    width 100%
+    height 1px
+    background $color
+
+// 上边框1px
+bottom-border-1px($color)
+  position relative
+  &::before
+    content ''
+    position absolute
+    z-index 200px
+    left 0
+    bottom 0
+    width 100%
+    height 1px
+    background $color
+
+//根据像素比缩放1px
+@media only screen and (-webkit-device-pixel-ratio: 2)
+  .border-1px
+    &::before
+      translate scaleY(.5)
+@media only screen and (-webkit-device-pixel-ratio: 3)
+  .border-1px
+    &::before
+      translate scaleY(.33333)
+
+// 清除浮动
+clearFix()
+  *zoom 1
+  &::after
+    content ''
+    display block
+    clear both
+
+// 根据像素比来使用 2x 3x
+bg-image($url)
+  background-image:url($url+"@2x.png")
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    background-image:url($url+"@3x.png")
