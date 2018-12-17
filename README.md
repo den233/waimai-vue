@@ -21,8 +21,8 @@ npm run build --report
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 # 先进入ghop_server下载依赖 启动服务  
-   npm i
+ 
    npm start 
 # 再启动项目  
-   npm i
+
    npm start
